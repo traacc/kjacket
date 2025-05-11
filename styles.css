@@ -1645,6 +1645,7 @@ textarea.quiz__customAnswer  {
 
     column-gap: 1em;
   }
+  
   .certificates .certificates__title {
     display: flex;
     text-align: center;
@@ -1652,6 +1653,10 @@ textarea.quiz__customAnswer  {
   }
   .certificates .title {
     text-align: left;
+  }
+  .certificates .certificates__list .certificates__item .certificates__pic {
+    width: 85%;
+    margin: 0 auto;
   }
   .materials {
     display: none;
@@ -1669,8 +1674,8 @@ textarea.quiz__customAnswer  {
     margin-bottom: 1em;
   }
   .materials__list .materials__item {
-    padding: 20px 20px 50px 20px;
-    max-height: 190px;
+    padding: 32px 20px 115px 20px;
+    max-height: 192px;
   }
   .materials__list .materials__item .materials__title {
     font-size: 1.25rem;
@@ -1724,21 +1729,21 @@ textarea.quiz__customAnswer  {
     margin-bottom: 2em;
   }
   .supply__line {
-    column-gap: 1em;
-    margin-bottom: 1em;
+    column-gap: 0.7em;
+    margin-bottom: 0.3em;
 
     align-items: center;
     
   }
   .supply__line .supply__item {
-    width: 33%;
+    width: 30%;
   }
   .clients .clients__line {
     column-gap: 3em;
     align-items: center;
   }
   .clients .clients__line .clientsLine__item {
-    width: 33%;
+    width: 30%;
   }
   .faq {
     margin-top: 5em;
