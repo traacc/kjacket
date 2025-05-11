@@ -348,7 +348,7 @@ h1,h2,h3,h4,h5 {
 
   column-gap: 36px;
 
-  animation: ticker 30s infinite linear forwards;
+  /*animation: ticker 30s infinite linear forwards;*/
 
   transition: all .2s linear;
 }
