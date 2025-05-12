@@ -73,7 +73,12 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-UltraLightItalic.woff2);
+  font-weight: 200;
+  font-style: italic;
+}
 @font-face {
   font-family: "Gilroy";
   src: url(./fonts/Gilroy-Light.woff2);
@@ -90,8 +95,18 @@ textarea:not([rows]) {
 }
 @font-face {
   font-family: "Gilroy";
+  src: url(./fonts/Gilroy-SemiBold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Gilroy";
   src: url(./fonts/Gilroy-Bold.woff2);
   font-weight: 700;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-ExtraBold.woff2);
+  font-weight: 800;
 }
 @font-face {
   font-family: "Gilroy";
@@ -260,7 +275,7 @@ h1,h2,h3,h4,h5 {
 
 .header .inner .header__main .header__info {
   text-align: right;
-  padding-left: 1.7em;
+  padding-left: 0.7em;
 }
 .header .inner .header__main .header__info .phone{
   font-size: 1.5rem;
@@ -391,8 +406,9 @@ h1,h2,h3,h4,h5 {
 
   animation: ticker_Clients 30s infinite linear forwards;
 }
-.clientsLine .clientsLine__item--text {
+.clientsLine .clientsLine__desc {
   font-style: italic;
+  font-weight: 200;
 }
 .clientsLine__item {
   flex-shrink: 0;
