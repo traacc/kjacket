@@ -433,7 +433,7 @@ h1,h2,h3,h4,h5 {
 }
 .opportunities__buttons {
   display: flex;
-  column-gap: 1em;
+  column-gap: 0.3em;
 }
 .opportunities__back {
   background-image: url(./images/arrow-back.svg);
@@ -844,7 +844,7 @@ textarea.quiz__customAnswer  {
 .manager__info {
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  row-gap: 0.4em;
 }
 .manager__socials {
   display: flex;
