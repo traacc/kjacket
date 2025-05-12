@@ -1723,7 +1723,7 @@ textarea.quiz__customAnswer  {
   .hero {
     padding-top: 4.9em;
 
-    background-position: 105% 61%;
+    background-position: 118% 61%;
     background-size: 45%;
 
     padding-bottom: 1.25em;
@@ -1735,6 +1735,10 @@ textarea.quiz__customAnswer  {
   }
   .hero .hero__main {
     max-width: 223px;
+  }
+  .hero .inner .hero__image {
+      width: 50%;
+      right: -16%;
   }
   .hero .hero__main .feedbackFormOpen {
     margin-left: 0;
