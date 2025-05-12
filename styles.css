@@ -1609,6 +1609,15 @@ textarea.quiz__customAnswer  {
   html {
     font-size: 16px;
   }
+  @keyframes ticker_Clients {
+    0% {
+      transform: translate(50px, 0);
+    }
+
+    100% {
+      transform: translate(-80%, 0);
+    }
+  }
   .container {
     padding-left: 10px;
     padding-right: 10px;
@@ -1680,6 +1689,7 @@ textarea.quiz__customAnswer  {
 
   .hero .inner .content .title {
     font-size: 1.6rem;
+    font-weight: 600;
   }
   .hero .hero__main {
     max-width: 223px;
@@ -1687,20 +1697,23 @@ textarea.quiz__customAnswer  {
   .hero .hero__main .feedbackFormOpen {
     margin-left: 0;
     padding: 11px 30px;
-    width: 100%;
+    width: 86%;
 
     font-size: 0.833rem;
     font-weight: 400;
   }
   .hero .inner .content ul.desc {
-    padding-left: 2.6em;
+    padding-left: 1.6em;
+    margin-bottom: 1.1em;
   }
   .hero .inner .content ul.desc li::before {
     height: 9px;
     width: 9px;
 
     top: 3px;
+    left: -20px;
   }
+
   .clientsLine__item {
     width: 18%;
   }
@@ -1724,6 +1737,9 @@ textarea.quiz__customAnswer  {
 
     height: 62px;
     flex-shrink: 0;
+  }
+  .about__item--rotateIcon img{
+    transform: rotate(270deg);
   }
   .about .about__list  .about__item .about__img {
     width: 30px;
