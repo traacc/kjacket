@@ -1994,6 +1994,9 @@ textarea.quiz__customAnswer  {
   .certificates .title {
     text-align: left;
   }
+  .certificates .certificates__list {
+    column-gap: 0;
+  }
   .certificates .certificates__list .certificates__item .certificates__pic {
     width: 80%;
     margin: 0 auto;
@@ -2084,6 +2087,11 @@ textarea.quiz__customAnswer  {
   }
   .faq .faq__item.active .faq__answer {
     padding: 14px 8px;
+    
+ 
+  }
+  .faq .faq__item .faq__answer {
+    padding: 0 8px;
     font-weight: 300;
     font-size: 0.833rem;
   }
