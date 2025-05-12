@@ -135,6 +135,8 @@ body {
   background-color: #FAFAFA;
   line-height: 1.2;
   margin: 0;
+
+  position: relative;
 }
 html, body {
     max-width: 100%;
