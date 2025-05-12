@@ -111,6 +111,15 @@ h1,h2,h3,h4,h5 {
     transform: translate(-100%, 0);
   }
 }
+@keyframes ticker_Clients {
+  0% {
+    transform: translate(300px, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 .btn {
   font-weight: 500;
   background-color: var(--accent-color);
@@ -170,6 +179,28 @@ h1,h2,h3,h4,h5 {
 
   left: 0;
   top: 0;
+}
+.linkAccess {
+  position: relative;
+}
+.linkAccess::after {
+  content: '';
+
+  position: absolute;
+  z-index: 10;
+
+  right: 5%;
+  bottom: 5%;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 100%;
+
+  background-color: #fff;
+  background-image: url('./images/double_arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .header {
   padding-top: 2.3em;
@@ -245,7 +276,7 @@ h1,h2,h3,h4,h5 {
 .hero .inner .content ul.desc {
   color: #696969;
   margin-bottom: 1.8em;
-  padding-left: 4em;
+  padding-left: 2.6em;
 }
 .hero .inner .content ul.desc li {
   margin-bottom: 0.95em;
@@ -273,7 +304,7 @@ h1,h2,h3,h4,h5 {
 .hero .hero__main .feedbackFormOpen {
   font-weight: 700;
   padding: 38px 98px;
-  margin-left: 2em;
+  margin-left: 1em;
   font-size: 1.2rem;
 }
 .hero .inner .hero__image {
@@ -296,7 +327,7 @@ h1,h2,h3,h4,h5 {
 
 
 
-  animation: ticker 30s infinite linear forwards;
+  animation: ticker_Clients 30s infinite linear forwards;
 }
 .clientsLine .clientsLine__item--text {
   font-style: italic;
@@ -305,7 +336,7 @@ h1,h2,h3,h4,h5 {
   flex-shrink: 0;
 }
 .about {
-  padding-top: 5.25em;
+  padding-top: 4.75em;
 }
 .about .text {
   font-size: 1.2rem;
@@ -329,7 +360,7 @@ h1,h2,h3,h4,h5 {
 
 
 .opportunities {
-  padding-top: 3.85em;
+  padding-top: 3.35em;
 }
 .opportunities .opportunities__title {
   display: flex;
@@ -443,7 +474,7 @@ h1,h2,h3,h4,h5 {
     row-gap: 3em;
 }
 .specification {
-  padding-top: 5em;
+  padding-top: 4.6em;
 }
 .specification__list {
   width: 100%;
@@ -671,7 +702,7 @@ textarea.quiz__customAnswer  {
 }
 .manager__content {
   background-color: #fff;
-  padding: 30px;
+  padding: 30px 30px;
   border-radius: 10px;
 
   
@@ -1056,6 +1087,7 @@ textarea.quiz__customAnswer  {
 .map .map__feedback form .btn {
   height: 52px;
   padding: 10px 45px;
+  border-radius: 5px;
 
   font-size: 0.8rem;
 }
@@ -1100,6 +1132,8 @@ textarea.quiz__customAnswer  {
     position: absolute;
     top: -270px;
     z-index: 0;
+
+    width: 100%;
 }
 .footer .inner {
   background-color: #373737;

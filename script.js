@@ -2,15 +2,57 @@ const opportunities__list = document.querySelector(".opportunities__list");
 const opportunitiesBack = document.querySelector(".opportunities__back");
 const opportunitiesForward = document.querySelector(".opportunities__forward");
 
-  opportunities__list.addEventListener('dragstart', (e)=>{
+document.addEventListener("DOMContentLoaded", ()=>{
+
+
+    
+    const opportunitiesWidth = opportunities__list.children[0].getBoundingClientRect().width;
+    const opportunitiesCount = opportunities__list.childElementCount;
+
+    console.log(opportunitiesWidth);
+    const opportunitiesAnim = gsap.to('.opportunities__list', { 
+        x: -opportunitiesWidth * opportunitiesCount,
+        duration: 45,
+        repeat: -1,
+        ease: "none",
+    });
+    opportunitiesAnim.seek(45)
+    opportunitiesBack.addEventListener('mousedown', ()=>{
+        opportunitiesAnim.timeScale(4);
+        opportunitiesAnim.reverse();
+        
+        //changeAnimationSpeed(clientsRow, 10, animationStartTime);
+        //clientsRow.classList.add('backSpeed');
+    });
+    opportunitiesBack.addEventListener('mouseup', ()=>{
+
+        opportunitiesAnim.timeScale(1);
+        //changeAnimationSpeed(clientsRow, 30, animationStartTime);
+        //clientsRow.classList.remove('backSpeed');
+    });
+
+    opportunitiesForward.addEventListener('mousedown', (el)=>{
+        opportunitiesAnim.play();
+        opportunitiesAnim.timeScale(4);
+        //changeAnimationSpeed(clientsRow, 10, animationStartTime);
+        //clientsRow.classList.add('fowardSpeed');
+    });
+    opportunitiesForward.addEventListener('mouseup', (el)=>{
+
+        opportunitiesAnim.timeScale(1);
+        //changeAnimationSpeed(clientsRow, 30, animationStartTime);
+        //clientsRow.classList.remove('fowardSpeed');
+    });
+
+
+    opportunities__list.addEventListener('dragstart', (e)=>{
 
     opportunities__list.style.animation = 'unset';
     let dist = e.clientX;
     opportunities__list.style.transform = `translate(-${dist*4}px, 0)`
-  });
-  opportunitiesBack.addEventListener('click', ()=>{
+    });
+})
 
-  });
 
 /* Quiz */
 
@@ -292,39 +334,7 @@ const swiperMaterials = new Swiper('.materialsSwiper', {
 if(opportunities__list) {
     //let animationStartTime = clients.querySelector(".clients__list .clients__row").getAnimations()[0].startTime;
 
-    const opportunitiesAnim = gsap.to('.opportunities__list', { 
-        x: -10000,
-        duration: 90,
-        repeat: -1,
-        ease: "none",
-    });
-    opportunitiesAnim.seek(45)
-    opportunitiesBack.addEventListener('mousedown', ()=>{
-        opportunitiesAnim.timeScale(4);
-        opportunitiesAnim.reverse();
-        
-        //changeAnimationSpeed(clientsRow, 10, animationStartTime);
-        //clientsRow.classList.add('backSpeed');
-    });
-    opportunitiesBack.addEventListener('mouseup', ()=>{
 
-        opportunitiesAnim.timeScale(1);
-        //changeAnimationSpeed(clientsRow, 30, animationStartTime);
-        //clientsRow.classList.remove('backSpeed');
-    });
-
-    opportunitiesForward.addEventListener('mousedown', (el)=>{
-        opportunitiesAnim.play();
-        opportunitiesAnim.timeScale(4);
-        //changeAnimationSpeed(clientsRow, 10, animationStartTime);
-        //clientsRow.classList.add('fowardSpeed');
-    });
-    opportunitiesForward.addEventListener('mouseup', (el)=>{
-
-        opportunitiesAnim.timeScale(1);
-        //changeAnimationSpeed(clientsRow, 30, animationStartTime);
-        //clientsRow.classList.remove('fowardSpeed');
-    });
 }
 
 /* Specs */
@@ -336,3 +346,58 @@ specificationBtn.addEventListener('click', ()=>{
     specificationBtn.classList.add('hide');
     specificationTable2.classList.remove('hide');
 })
+
+/* Tel Mask */
+
+const telInputs = document.querySelectorAll(".formPhone");
+
+const prefixNumber = (str) => {
+    if (str === "7") {
+        return "7 (";
+    }
+    if (str === "8") {
+        return "8 (";
+    }
+    if (str === "9") {
+        return "7 (9";
+    }
+    return "7 (";
+};
+
+// ======================================
+telInputs.forEach((el)=>{
+    el.addEventListener("input", (e) => {
+        const value = el.value.replace(/\D+/g, "");
+        const numberLength = 11;
+    
+        let result;
+        if (el.value.includes("+8") || el.value[0] === "8") {
+        result = "";
+        } else {
+        result = "+";
+        }
+    
+        //
+        for (let i = 0; i < value.length && i < numberLength; i++) {
+        switch (i) {
+            case 0:
+            result += prefixNumber(value[i]);
+            continue;
+            case 4:
+            result += ") ";
+            break;
+            case 7:
+            result += "-";
+            break;
+            case 9:
+            result += "-";
+            break;
+            default:
+            break;
+        }
+        result += value[i];
+        }
+        //
+        el.value = result;
+    });
+});
