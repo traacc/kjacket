@@ -13,14 +13,16 @@ function watchOpportunitiesEls() {
     rectRightEl = opportunitiesRightBlock.getBoundingClientRect();
     opportunitiesItems.forEach((el)=>{
         const rect = el.getBoundingClientRect();
+        
+            if(rect.left<rectLeftEl.right && rect.right>rectLeftEl.left) {
+                el.classList.add('onBorder');
+            } else if (rect.left<rectRightEl.right && rect.right>rectRightEl.left) {
+                el.classList.add('onBorder');
+            } else {
+                el.classList.remove('onBorder');
+            }
 
-        if(rect.left<rectLeftEl.right && rect.right>rectLeftEl.left) {
-            el.classList.add('onBorder');
-        } else if (rect.left<rectRightEl.right && rect.right>rectRightEl.left) {
-            el.classList.add('onBorder');
-        } else {
-            el.classList.remove('onBorder');
-        }
+
     });
 }
 
@@ -36,7 +38,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
         x: -opportunitiesWidth * opportunitiesCount,
         duration: 45,
         onUpdate: () =>{
-            watchOpportunitiesEls();
+            if(window.innerWidth>768) {
+                watchOpportunitiesEls();
+            }
         },
         repeat: -1,
         ease: "none",

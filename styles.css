@@ -74,6 +74,31 @@ textarea:not([rows]) {
 }
 
 
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-Regular.woff2);
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-Heavy.woff2);
+  font-weight: 900;
+}
+
 .hide {
   display: none !important;
 }
@@ -260,13 +285,14 @@ h1,h2,h3,h4,h5 {
   flex-wrap: wrap;
   column-gap: 0.75em;
 }
+
 .hero {
   padding-top: 8.5em;
 
   background-image: url(./images/hero_bg.svg);
   background-position: 86% center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 34%;
 
   padding-bottom: 7.25em;
 }
@@ -277,6 +303,8 @@ h1,h2,h3,h4,h5 {
   font-size: 3em;
   font-weight: 400;
   margin-bottom: 0.5333em;
+
+  max-width: 800px;
 
   color: #343434;
 }
@@ -1267,6 +1295,11 @@ textarea.quiz__customAnswer  {
   color: #A5A5A5;
   font-size: 0.8rem;
 }
+@media (min-width: 1921px) {
+  .hero {
+      background-size: contain;
+  }
+}
 @media (max-width: 1700px) {
   .hero .inner{
     align-items: center;
@@ -1478,6 +1511,12 @@ textarea.quiz__customAnswer  {
     width: 15px;
 
   }
+  .linkAccess::after {
+    width: 23px;
+    height: 23px;
+
+    background-size: 50%;
+  }
   .btn {
     font-size: 1.133rem;
     font-weight: 400;
@@ -1522,7 +1561,13 @@ textarea.quiz__customAnswer  {
   }
   .hero {
     padding-top: 4.9em;
+
+    background-position: 105% 61%;
+    background-size: 45%;
+
+    padding-bottom: 1.25em;
   }
+
   .hero .inner .content .title {
     font-size: 1.6rem;
   }
@@ -1626,7 +1671,7 @@ textarea.quiz__customAnswer  {
   .offer__note--mobile {
     display: block;
     margin-top: 33px;
-    margin-bottom: 16px;
+    margin-bottom: 33px;
   }
   .specification__list tr td {
     font-size: 0.8333rem;
@@ -1711,7 +1756,7 @@ textarea.quiz__customAnswer  {
     display: flex;
     align-items: center;
 
-    column-gap: 1em;
+    column-gap: .6em;
   }
   
   .certificates .certificates__title {
@@ -1753,7 +1798,7 @@ textarea.quiz__customAnswer  {
   .materials__buttons {
     display: flex;
     justify-content: center;
-    column-gap: 1em;
+    column-gap: .6em;
   }
   .materials__back {
     background-image: url(./images/arrow-back.svg);
