@@ -1099,6 +1099,7 @@ textarea.quiz__customAnswer  {
   background-color: #fff;
   padding: 0 25px;
   border-radius: 20px;
+  margin-left: 1em;
   
   max-height: 0;
 
@@ -1108,6 +1109,7 @@ textarea.quiz__customAnswer  {
 .faq .faq__item.active .faq__answer {
   padding: 25px 25px;
   margin-bottom: 1.5em;
+  margin-left: 1em;
 }
 .faq .faq__feedback {
   margin-top: 2.4em;
@@ -1769,6 +1771,9 @@ textarea.quiz__customAnswer  {
   .about {
     padding-top: 3.75em;
   }
+  .about .text {
+    font-size: 1rem;
+  }
   .about .about__list {
     flex-wrap: wrap;
     row-gap: 1em;
@@ -1814,6 +1819,10 @@ textarea.quiz__customAnswer  {
   }
   .advs__list {
     width: 90%;
+    padding-left: 1.2em;
+  }
+  .advs__list .adv__item {
+    margin-bottom: 1.5em;
   }
   .opportunities__list {
     column-gap: 1em;
@@ -1839,20 +1848,37 @@ textarea.quiz__customAnswer  {
   .advs .inner .adv__title img{
     max-width: 42px;
   }
+
+  .advs__pic {
+    margin-bottom: 1em;
+  }
+  .advs .inner .adv__title {
+    font-size: 1.16rem;
+    font-weight: 500;
+    column-gap: 1.5em;
+  }
   .offer__title .subtitle{
     display: none;
   }
   .orderExample__order {
     width: 100%;
+    font-size: 1.333rem;
+    font-weight: 500;
+
+    border-radius: 10px;
+    padding: 18px 60px;
   }
   .offer .offer__content {
     flex-direction: column-reverse;
   }
   .offer__note--mobile {
     display: block;
-    margin-top: 33px;
-    margin-bottom: 33px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 12px;
   }
+
   .specification__list tr td {
     font-size: 0.8333rem;
     padding: 10px 0;
@@ -1866,6 +1892,9 @@ textarea.quiz__customAnswer  {
   .spheres {
     display: none;
   }
+  .spheres {
+    margin-top: 3em;
+  }
   .spheres .sectionTitle {
     margin-bottom: 25px;
   }
@@ -1877,7 +1906,7 @@ textarea.quiz__customAnswer  {
   }
   .spheres--mobile .spheres__title .spheres__buttons {
     display: flex;
-    column-gap: .6em;
+    column-gap: 0.3em;
   }
   .spheres .spheres__list {
     display: flex;
@@ -1887,6 +1916,15 @@ textarea.quiz__customAnswer  {
     height: 146px;
 
     padding: 14px;
+  }
+  .spheres .spheres__list .spheres__item .spheres__name {
+    margin-bottom: 0;
+  }
+  .spheres .spheres__list .spheres__item .desc {
+    
+  }
+  .manager__content {
+    font-size: 1rem;
   }
   .offer {
     margin-top: 3em;
@@ -1908,8 +1946,10 @@ textarea.quiz__customAnswer  {
   }
   .offer .offer__content .offer__quiz .quiz__answers .quiz__answer label {
     width: 100%;
-    padding: 22px 30px;
+    padding: 14px 30px;
     display: block;
+
+    font-size: 1.166rem;
   }
   .offer .offer__content .offer__quiz .quiz__answers .inputTextValue {
     padding: 14px 18px;
@@ -1918,10 +1958,17 @@ textarea.quiz__customAnswer  {
   .offer .offer__content .offer__quiz .quiz__answers .checkbox {
     flex-shrink: 0;
   }
+  .quiz__counter {
+    font-size: 1.166rem;
+  }
+  .offer .offer__content .offer__quiz .quiz__buttons .btn {
+    padding: 14px 18px;
+    font-size: 1.166rem;
+  }
   .quiz__buttons {
     flex-direction: column;
     row-gap: 1em;
-    margin-top: 1em;
+    margin-top: 0em;
   }
   .certificates {
     margin-top: 2em;
@@ -1936,7 +1983,7 @@ textarea.quiz__customAnswer  {
     display: flex;
     align-items: center;
 
-    column-gap: .6em;
+    column-gap: 0.3em;
   }
   
   .certificates .certificates__title {
@@ -1948,8 +1995,11 @@ textarea.quiz__customAnswer  {
     text-align: left;
   }
   .certificates .certificates__list .certificates__item .certificates__pic {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
+  }
+  .certificates .certificates__list .certificates__item .certificates__title { 
+    margin-left: 0;
   }
   .materials {
     display: none;
@@ -1978,7 +2028,7 @@ textarea.quiz__customAnswer  {
   .materials__buttons {
     display: flex;
     justify-content: center;
-    column-gap: .6em;
+    column-gap: 0.3em;
   }
   .materials__back {
     background-image: url(./images/arrow-back.svg);
@@ -1992,6 +2042,10 @@ textarea.quiz__customAnswer  {
   .manager__feedback {
     width: 100%;
     padding: 11px 41px;
+
+    font-size: 1.2rem;
+
+    border-radius: 10px;
   }
   .manager__wrapper {
     width: 100%;
@@ -2022,6 +2076,17 @@ textarea.quiz__customAnswer  {
 
     background-size: 33%;
   }
+  .faq .faq__question .title .num {
+    font-size: 1rem;
+  }
+  .faq .faq__question .title {
+    column-gap: 0;
+  }
+  .faq .faq__item.active .faq__answer {
+    padding: 14px 8px;
+    font-weight: 300;
+    font-size: 0.833rem;
+  }
   .supply .sectionTitle {
     margin-bottom: 2em;
   }
@@ -2043,7 +2108,7 @@ textarea.quiz__customAnswer  {
     align-items: center;
   }
   .clients .clients__line .clientsLine__item {
-    width: 30%;
+    width: 12%;
   }
   .faq {
     margin-top: 5em;
@@ -2055,8 +2120,22 @@ textarea.quiz__customAnswer  {
   .faq .faq__question .title {
     font-size: 1.1rem;
   }
+  .faq .faq__question .title .num {
+    padding: 10px 10px 0 12px;
+  }
   .num::before {
-    width: 15px;
+    width: 12px;
+  }
+  .faq .faq__feedback .title {
+    font-size: 1.166em;
+    text-align: center;
+  }
+  .faq .faq__feedback .feedback__title .subtitle {
+    display: none;
+  }
+  .faq .faq__feedback .feedback__form input {
+    height: 28px;
+    margin-bottom: 9px;
   }
   .map {
     padding-bottom: 3em;
@@ -2066,10 +2145,17 @@ textarea.quiz__customAnswer  {
   }
   .feedback__form .btn {
     width: 100%;
-    padding: 22px 38px;
+    padding: 8px 38px;
   }
   .map__contacts .contacts__list .contacts__item {
     font-size: 1.115em;
+  }
+  .map__contacts .contacts__list .contacts__item img {
+    width: 32px;
+    flex-shrink: 0;
+  }
+  .map .map__contacts h3 {
+    font-size: 1.6rem;
   }
   .footer {
     margin-left: 26px;
@@ -2080,7 +2166,7 @@ textarea.quiz__customAnswer  {
     padding: 48px 12px;
   }
   footer .logo {
-      max-width: 100%; 
+      max-width: 201px; 
   }
   .footer__title {
     display: none;
@@ -2100,13 +2186,22 @@ textarea.quiz__customAnswer  {
 
     border: none;
   }
+  .footer__nav .nav__item {
+    font-size: 1.16rem;
+  }
   .footer .inner .footer__social--mobile {
     display: flex;
     font-size: 1.25rem;
     column-gap: 1.6em;
     flex-direction: column;
-    margin-top: 1em;
+    margin-top: 0em;
     margin-bottom: 1em;
+  }
+  .footer__nav {
+    margin-bottom: 0;
+  }
+  .devLogo {
+    max-width: 91px;
   }
   .footer__social--mobile .social__item{
     display: flex;
