@@ -361,6 +361,7 @@ h1,h2,h3,h4,h5 {
 
 .opportunities {
   padding-top: 3.35em;
+  position: relative;
 }
 .opportunities .opportunities__title {
   display: flex;
@@ -378,6 +379,22 @@ h1,h2,h3,h4,h5 {
 .opportunities__forward {
   background-image: url(./images/arrow-forward.svg);
 }
+.opportunitiesLeftBlock {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 100px;
+}
+.opportunitiesRightBlock {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 300px;
+  width: 100px;
+}
 .opportunities__list {
   display: flex;
 
@@ -389,6 +406,10 @@ h1,h2,h3,h4,h5 {
 }
 .opportunities__list .opportunities__item {
   flex-shrink: 0;
+  transition: filter .2s ease-in;
+}
+.opportunities__list .opportunities__item.onBorder {
+  filter: opacity(25%);
 }
 .opportunities .opportunities__wrapper{
   position: relative;

@@ -1,6 +1,28 @@
 const opportunities__list = document.querySelector(".opportunities__list");
+
 const opportunitiesBack = document.querySelector(".opportunities__back");
 const opportunitiesForward = document.querySelector(".opportunities__forward");
+
+const opportunitiesLeftBlock = document.querySelector(".opportunitiesLeftBlock");
+const opportunitiesRightBlock = document.querySelector(".opportunitiesRightBlock");
+
+function watchOpportunitiesEls() {
+    const opportunitiesItems = opportunities__list.querySelectorAll(".opportunities__item");
+
+    rectLeftEl = opportunitiesLeftBlock.getBoundingClientRect();
+    rectRightEl = opportunitiesRightBlock.getBoundingClientRect();
+    opportunitiesItems.forEach((el)=>{
+        const rect = el.getBoundingClientRect();
+
+        if(rect.left<rectLeftEl.right && rect.right>rectLeftEl.left) {
+            el.classList.add('onBorder');
+        } else if (rect.left<rectRightEl.right && rect.right>rectRightEl.left) {
+            el.classList.add('onBorder');
+        } else {
+            el.classList.remove('onBorder');
+        }
+    });
+}
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
@@ -13,6 +35,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const opportunitiesAnim = gsap.to('.opportunities__list', { 
         x: -opportunitiesWidth * opportunitiesCount,
         duration: 45,
+        onUpdate: () =>{
+            watchOpportunitiesEls();
+        },
         repeat: -1,
         ease: "none",
     });
