@@ -107,6 +107,7 @@ textarea:not([rows]) {
 }
 html {
     --accent-color: #E84E22;
+    --clientsLineLeftHideBlockWidth: 25%;
     font-family: "Gilroy", sans-serif;
     font-style: normal;
     font-size: 20px;
@@ -368,7 +369,7 @@ h1,h2,h3,h4,h5 {
 }
 .clientsLine .inner::before {
   content: '';
-  width: 25%;
+  width: var(--clientsLineLeftHideBlockWidth);
   height: 100px;
   background-color: #FAFAFA;
   position: absolute;
@@ -1126,7 +1127,7 @@ textarea.quiz__customAnswer  {
 .map {
   position: relative;
   margin-top: 5em;
-  padding-bottom: 15em;
+  padding-bottom: 18em;
   
 }
 .containerMap {
@@ -1214,6 +1215,7 @@ textarea.quiz__customAnswer  {
 }
 .map .map__contacts {
     border-radius: 15px;
+    border-top-right-radius: 0px;
     padding: 25px 25px 25px 50px;
 
 }
@@ -1405,11 +1407,20 @@ textarea.quiz__customAnswer  {
   margin-bottom: 1em;
 }
 
+
+
 @media (min-width: 1921px) {
+  html {
+    --clientsLineLeftHideBlockWidth: 30%;
+  }
   .hero {
       background-size: contain;
   }
+  .clientsLine .inner::before {
+    width: var(--clientsLineLeftHideBlockWidth);
+  }
 }
+
 @media (max-width: 1700px) {
   .hero .inner{
     align-items: center;

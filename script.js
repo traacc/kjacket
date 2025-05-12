@@ -26,18 +26,36 @@ function watchOpportunitiesEls() {
     });
 }
 
+function changeClientsHideSizeBlock() {
+    const rootEl = document.querySelector(':root');
+
+    if(window.innerWidth>2000) {
+
+         const sizePerOffset = (window.innerWidth / 500) + 30;
+         if(sizePerOffset>=100)
+            sizePerOffset = 90;
+         rootEl.style.setProperty('--clientsLineLeftHideBlockWidth', sizePerOffset + '%');
+    }
+}
+document.addEventListener("DOMContentLoaded", changeClientsHideSizeBlock);
+window.addEventListener("resize", changeClientsHideSizeBlock);
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
 
     
     let opportunitiesWidth = opportunities__list.children[0].getBoundingClientRect().width;
     const opportunitiesCount = opportunities__list.childElementCount;
+    
 
     console.log(opportunitiesWidth);
     if(opportunitiesWidth<=0)
         opportunitiesWidth = 250;
+
+    let xWidth = (-opportunitiesWidth * opportunitiesCount) + (window.innerWidth);
+    console.log(xWidth);
     const opportunitiesAnim = gsap.to('.opportunities__list', { 
-        x: -opportunitiesWidth * opportunitiesCount,
+        x: xWidth,
         duration: 45,
         onUpdate: () =>{
             if(window.innerWidth>768) {
@@ -76,12 +94,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 
 
-    /*opportunities__list.addEventListener('dragstart', (e)=>{
+    opportunities__list.addEventListener('dragstart', (e)=>{
 
     opportunities__list.style.animation = 'unset';
     let dist = e.clientX;
     opportunities__list.style.transform = `translate(-${dist*4}px, 0)`
-    });*/
+    });
 })
 
 
@@ -437,6 +455,7 @@ telInputs.forEach((el)=>{
 
 const popupFeedbackWindow = document.querySelector(".popupFeedback");
 const popupFeedbackOpen = document.querySelectorAll(".linkAccess");
+const popupFeedbackOpenBtns = document.querySelectorAll(".openFeedbackPopup");
 const popupOverlay = document.querySelector(".popupOverlay");
 const popupFeedbackWindowClose = popupFeedbackWindow.querySelector(".closeBtn");
 
@@ -450,6 +469,15 @@ function closeAll() {
 }
 
 popupFeedbackOpen.forEach((el)=>{
+    el.addEventListener('click', (e)=>{
+        e.preventDefault();
+        blockScroll();
+        popupFeedbackWindow.classList.remove('hide');
+        popupOverlay.classList.remove('hide');
+    })
+
+});
+popupFeedbackOpenBtns.forEach((el)=>{
     el.addEventListener('click', (e)=>{
         e.preventDefault();
         blockScroll();
