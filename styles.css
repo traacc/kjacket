@@ -891,6 +891,7 @@ textarea.quiz__customAnswer  {
   margin-top: 1.04em;
   font-size: 1.2rem;
   margin-left: 1em;
+  text-align: center;
 }
 .materials {
   margin-top: 95px;
