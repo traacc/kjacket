@@ -207,12 +207,18 @@ h1,h2,h3,h4,h5 {
 }
 .linkAccess {
   position: relative;
+
+  cursor: pointer;
 }
 .linkAccess::after {
   content: '';
 
   position: absolute;
   z-index: 10;
+
+  opacity: 0;
+
+  transition: opacity .2s ease-in;
 
   right: 5%;
   bottom: 5%;
@@ -226,6 +232,9 @@ h1,h2,h3,h4,h5 {
   background-image: url('./images/double_arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
+}
+.linkAccess:hover::after {
+  opacity: 1;
 }
 .header {
   padding-top: 2.3em;
@@ -261,7 +270,7 @@ h1,h2,h3,h4,h5 {
   position: absolute;
   width: 11px;
   height: 11px;
-  left: 34px;
+  left: 58px;
   top: 31%;
   border-radius: 100%;
   background-color: #25D366;
@@ -346,11 +355,27 @@ h1,h2,h3,h4,h5 {
   position: absolute;
   right: 0;
 }
-.hero .inner .hero__image {
-
-}
 .clientsLine {
-  
+  position: relative;
+}
+.clientsLine .inner{
+  display: flex;
+  align-items: end;
+}
+.clientsLine .inner::before {
+  content: '';
+  width: 25%;
+  height: 100px;
+  background-color: #FAFAFA;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  z-index: 10;
+}
+.clientsLine .inner .clientsLine__desc{
+  flex-shrink: 0;
+  z-index: 20;
 }
 .clientsLine .clientsLine__row {
   display: flex;
@@ -997,6 +1022,8 @@ textarea.quiz__customAnswer  {
   justify-content: space-between;
   padding-top: 1em;
   padding-bottom: 1em;
+
+  cursor: pointer;
 }
 .faq .faq__question .title {
   display: flex;
@@ -1032,14 +1059,24 @@ textarea.quiz__customAnswer  {
   background-position: center;
   background-repeat: no-repeat;
   transform: rotate(180deg);
+
+  transition: transform 0.3s ease;
 }
 .faq .faq__item.active .toggle {
    transform: rotate(0deg);
 }
 .faq .faq__answer {
   background-color: #fff;
-  padding: 25px 25px;
+  padding: 0 25px;
   border-radius: 20px;
+  
+  max-height: 0;
+
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+.faq .faq__item.active .faq__answer {
+  padding: 25px 25px;
   margin-bottom: 1.5em;
 }
 .faq .faq__feedback {
@@ -1111,6 +1148,9 @@ textarea.quiz__customAnswer  {
   height: 265px;
 
   flex-shrink: 0;
+
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 .map .map__feedback h3 {
   font-size: 1.6rem;
@@ -1295,6 +1335,72 @@ textarea.quiz__customAnswer  {
   color: #A5A5A5;
   font-size: 0.8rem;
 }
+.popupOverlay {
+  background-color: #000000CC;
+  position: fixed;
+  z-index: 15;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.popupFeedback {
+  position: fixed;
+  border-radius: 15px;
+  max-width: 690px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 20;
+}
+.popupFeedback .closeBtn {
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+}
+.popupFeedback .closeBtn img {
+  width: 100%;
+}
+.popupFeedback .popupFeedback__form {
+  line-height: 1;
+  padding: 1em 4em;
+}
+.popupFeedback .popupFeedback__form h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+}
+.popupFeedback .popupFeedback__form input {
+  border: 1px #000 solid;
+  border-radius: 15px;
+  color: #fff;
+  padding: 18px 28px;
+  background-color: transparent;
+  height: 66px;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.popupFeedback .popupFeedback__form input {
+  color: #000;
+}
+.popupFeedback .popupFeedback__form input::placeholder {
+  color: #000;
+}
+.popupFeedback .popupFeedback__form .btn {
+  width: 100%;
+}
+.popupFeedback .popupFeedback__form .btn::before {
+  right: 27%;
+}
+.popupFeedback .popupFeedback__note {
+  font-size: 0.65rem;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
 @media (min-width: 1921px) {
   .hero {
       background-size: contain;
@@ -1434,7 +1540,7 @@ textarea.quiz__customAnswer  {
     font-size: 1.2rem;
   }
   .header .inner .header__main .header__info .schedule::before {
-    left: -10px;
+    left: 3px;
   }
   .header .inner .header__main .header__feedbackCall .feedbackCall {
     padding: 17px 32px;

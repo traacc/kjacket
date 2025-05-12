@@ -27,9 +27,7 @@
     <div class="toUpBtn">
         
     </div>
-    <div class="popupOverlay">
 
-    </div>
     <div class="popup">
         <div class="popup__header" style="background-image: url('./img/consulting_1.png');">
             <div class="closeBtn"><img src="./img/closeBtn.svg" alt=""></div>
@@ -49,11 +47,14 @@
                 <div class="popupFeedback__note">Отправляя заявку вы соглашаетесь с действующей политикой конфиденциальности и обработки персональных данных</div>
                 <button type="submit" class="btn sendForm">ОТПРАВИТЬ ЗАЯВКУ</button>
             </form>
+    </div>-->
+    <div class="popupOverlay hide">
+
     </div>
-    <div class="popupFeedback">
-        <div class="closeBtn"><img src="./img/closeBtnB.svg" alt=""></div>
+    <div class="popupFeedback hide">
+        <div class="closeBtn"><img src="./images/close.svg" alt=""></div>
         <form action="" class="popupFeedback__form">
-            <h4>Записаться на бесплатную консультацию</h4>
+            <h4>Бесплатная консультация</h4>
             <div class="inputRow">
                 <input class="formName" name="name" type="text" placeholder="Ваше имя">
                 <input class="formPhone" name="phone" type="tel" placeholder="+7 (___) ___ - __ - __">
@@ -61,7 +62,7 @@
             <div class="popupFeedback__note">Отправляя заявку вы соглашаетесь с действующей политикой конфиденциальности и обработки персональных данных</div>
             <button type="submit" class="btn sendForm">ОТПРАВИТЬ ЗАЯВКУ</button>
         </form>
-    </div>-->
+    </div>
     <header class="header">
         <div class="container">
             <div class="inner flex">
@@ -86,11 +87,11 @@
                 </div>
                 <div class="header__menu">
                     <nav class="nav">
-                        <a href="#" class="nav__item"><img src="./images/nav-1.svg" alt="">О материале</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-2.svg" alt="">Сферы применения</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-3.svg" alt="">Выполненые поставки</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-4.svg" alt="">Вопрос-ответ</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-5.svg" alt="">Контакты</a>
+                        <a href="#about" class="nav__item"><img src="./images/nav-1.svg" alt="">О материале</a>
+                        <a href="#spheres" class="nav__item"><img src="./images/nav-2.svg" alt="">Сферы применения</a>
+                        <a href="#supply" class="nav__item"><img src="./images/nav-3.svg" alt="">Выполненые поставки</a>
+                        <a href="#faq" class="nav__item"><img src="./images/nav-4.svg" alt="">Вопрос-ответ</a>
+                        <a href="#contacts" class="nav__item"><img src="./images/nav-5.svg" alt="">Контакты</a>
                     </nav>
                 </div>
 
@@ -118,15 +119,21 @@
         </div>
     </section>
     <div class="clientsLine">
-        <div class="clientsLine__row"  draggable="true">
-            <div class="clientsLine__item clientsLine__item--text">Среди наших<br>клиентов</div>
-            <div class="clientsLine__item"><img src="./images/client-1.png" alt=""></div>
-            <div class="clientsLine__item"><img src="./images/client-2.png" alt=""></div>
-            <div class="clientsLine__item"><img src="./images/client-3.png" alt=""></div>
-            <div class="clientsLine__item"><img src="./images/client-1.png" alt=""></div>
-            <div class="clientsLine__item"><img src="./images/client-2.png" alt=""></div>
-            <div class="clientsLine__item"><img src="./images/client-3.png" alt=""></div>
+        <div class="container">
+            <div class="inner">
+                <div class="clientsLine__desc">Среди наших<br>клиентов</div>
+                <div class="clientsLine__row"  draggable="true">
+                    
+                    <div class="clientsLine__item"><img src="./images/client-1.png" alt=""></div>
+                    <div class="clientsLine__item"><img src="./images/client-2.png" alt=""></div>
+                    <div class="clientsLine__item"><img src="./images/client-3.png" alt=""></div>
+                    <div class="clientsLine__item"><img src="./images/client-1.png" alt=""></div>
+                    <div class="clientsLine__item"><img src="./images/client-2.png" alt=""></div>
+                    <div class="clientsLine__item"><img src="./images/client-3.png" alt=""></div>
+                </div>
+            </div>
         </div>
+
     </div>
     <section class="about" id="about">
         <div class="container">
@@ -181,22 +188,22 @@
         <div class="opportunities__wrapper">
             <div class="opportunitiesLeftBlock"></div>
             <div class="opportunities__list">
-                <div class="opportunities__item"><img src="./images/opportunities-1.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-2.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-3.png" alt=""></div>
                 <div class="opportunities__item linkAccess"><img src="./images/opportunities-1.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-2.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-3.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-1.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-2.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-1.png" alt=""></div>
                 <div class="opportunities__item linkAccess"><img src="./images/opportunities-2.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-3.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-1.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-2.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-3.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-1.png" alt=""></div>
-                <div class="opportunities__item"><img src="./images/opportunities-2.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-3.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-1.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-2.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-3.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-1.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-2.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-1.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-2.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-3.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-1.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-2.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-3.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-1.png" alt=""></div>
+                <div class="opportunities__item linkAccess"><img src="./images/opportunities-2.png" alt=""></div>
             </div>
             <div class="opportunitiesRightBlock"></div>
         </div>
@@ -301,7 +308,7 @@
             </div>
         </div>
     </section>
-    <section class="spheres">
+    <section class="spheres" id="spheres">
         <div class="container">
             <div class="inner innerPd">
                 <div class="spheres__title">
@@ -622,7 +629,7 @@
             </div>
         </div>
     </section>
-    <section class="supply">
+    <section class="supply" id="supply">
         <img src="./images/mid_bg.svg" class="mid_bg">
         <div class="container">
             <div class="inner innerPd">
@@ -631,64 +638,64 @@
         </div>
         <div class="supply__list">
             <div class="supply__line supply__line--1">
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
                 <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
             </div>
             <div class="supply__line supply__line--2">
                 <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
                 <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
             </div>
             <div class="supply__line supply__line--3">
                 <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
                 <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-2.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-3.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-4.png" alt=""></div>
-                <div class="supply__item"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-2.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-3.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-4.png" alt=""></div>
+                <div class="supply__item linkAccess"><img src="./images/supply-1.png" alt=""></div>
             </div>
         </div>
     </section>
@@ -714,28 +721,28 @@
             <div class="clientsLine__item"><img src="./images/client-3.png" alt=""></div>
         </div>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <div class="inner innerPd">
                 <h2 class="sectionTitle">ОТВЕТЫ НА <span>ЧАСТО<br>ЗАДАВАЕМЫЕ</span> ВОПРОСЫ</h2>
                 <div class="faq__wrapper">
                     <div class="faq__questions">
                         <div class="faq__list">
-                            <div class="faq__item active">
+                            <div class="faq__item">
                                 <div class="faq__question"><div class="title"><div class="num">01</div> Как расчитывается стоимость?</div><div class="toggle"></div></div>
                                 <div class="faq__answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                             </div>
                             <div class="faq__item">
                                 <div class="faq__question"><div class="title"><div class="num">02</div> Присутствует ли гарантия на продукцию?</div><div class="toggle"></div></div>
-                                <div class="faq__answer hide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <div class="faq__answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                             </div>
                             <div class="faq__item">
                                 <div class="faq__question"><div class="title"><div class="num">03</div> Какие сроки производства и поставки?</div><div class="toggle"></div></div>
-                                <div class="faq__answer hide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <div class="faq__answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                             </div>
                             <div class="faq__item">
                                 <div class="faq__question"><div class="title"><div class="num">04</div> Кто производит монтаж изоляции?</div><div class="toggle"></div></div>
-                                <div class="faq__answer hide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <div class="faq__answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                             </div>
                         </div>
                     </div>
@@ -762,7 +769,7 @@
         <div class="container">
             <div class="inner">
                 <div class="map__header">
-                    <div class="map__contacts">
+                    <div class="map__contacts" id="contacts">
                         <h3>Наши контакты</h3>
                         <h4 class="subtitle">Проведем презентацию материала подберем необходимую конфигурцию под ваши нужды</h4>
                         <div class="contacts__list">
@@ -838,10 +845,10 @@
                     </div>
                 </div>
                 <div class="footer__nav">
-                        <a href="#" class="nav__item"><img src="./images/nav-1.svg" alt="">О материале</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-2.svg" alt="">Сферы применения</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-3.svg" alt="">Выполненые поставки</a>
-                        <a href="#" class="nav__item"><img src="./images/nav-4.svg" alt="">Вопрос-ответ</a>
+                        <a href="#about" class="nav__item"><img src="./images/nav-1.svg" alt="">О материале</a>
+                        <a href="#spheres" class="nav__item"><img src="./images/nav-2.svg" alt="">Сферы применения</a>
+                        <a href="#supply" class="nav__item"><img src="./images/nav-3.svg" alt="">Выполненые поставки</a>
+                        <a href="#faq" class="nav__item"><img src="./images/nav-4.svg" alt="">Вопрос-ответ</a>
                 </div>
                 <div class="footer__social--mobile">
                     <div class="social__item">

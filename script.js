@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
     
-    const opportunitiesWidth = opportunities__list.children[0].getBoundingClientRect().width;
+    let opportunitiesWidth = opportunities__list.children[0].getBoundingClientRect().width;
     const opportunitiesCount = opportunities__list.childElementCount;
 
     console.log(opportunitiesWidth);
+    if(opportunitiesWidth<=0)
+        opportunitiesWidth = 250;
     const opportunitiesAnim = gsap.to('.opportunities__list', { 
         x: -opportunitiesWidth * opportunitiesCount,
         duration: 45,
@@ -74,12 +76,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 
 
-    opportunities__list.addEventListener('dragstart', (e)=>{
+    /*opportunities__list.addEventListener('dragstart', (e)=>{
 
     opportunities__list.style.animation = 'unset';
     let dist = e.clientX;
     opportunities__list.style.transform = `translate(-${dist*4}px, 0)`
-    });
+    });*/
 })
 
 
@@ -274,7 +276,7 @@ function initOpportunities() {
 }
 
 // Call the function when document is loaded
-document.addEventListener('DOMContentLoaded', initOpportunities);
+//document.addEventListener('DOMContentLoaded', initOpportunities);
 
 /* FAQ Toggle */
 document.addEventListener('DOMContentLoaded', function() {
@@ -283,6 +285,8 @@ document.addEventListener('DOMContentLoaded', function() {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq__question');
         const answer = item.querySelector('.faq__answer');
+
+        answer.style.maxHeight = '0px';
         
         question.addEventListener('click', () => {
             // Check if current item is active
@@ -292,14 +296,12 @@ document.addEventListener('DOMContentLoaded', function() {
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
                 const otherAnswer = otherItem.querySelector('.faq__answer');
-                otherAnswer.classList.add('hide');
+                otherAnswer.style.maxHeight = '0px';
             });
             
-            // Toggle current item
-            if (!isActive) {
-                item.classList.add('active');
-                answer.classList.remove('hide');
-            }
+
+            item.classList.add('active');
+            answer.style.maxHeight = (answer.scrollHeight + 400) + 'px';
         });
     });
 });
@@ -430,3 +432,33 @@ telInputs.forEach((el)=>{
         el.value = result;
     });
 });
+
+/* Popup form */
+
+const popupFeedbackWindow = document.querySelector(".popupFeedback");
+const popupFeedbackOpen = document.querySelectorAll(".linkAccess");
+const popupOverlay = document.querySelector(".popupOverlay");
+const popupFeedbackWindowClose = popupFeedbackWindow.querySelector(".closeBtn");
+
+function blockScroll() {
+  document.body.style.overflow = 'hidden';
+}
+function closeAll() {
+  document.body.style.overflow = 'unset';
+  popupOverlay.classList.add('hide');
+  popupFeedbackWindow.classList.add('hide');
+}
+
+popupFeedbackOpen.forEach((el)=>{
+    el.addEventListener('click', (e)=>{
+        e.preventDefault();
+        blockScroll();
+        popupFeedbackWindow.classList.remove('hide');
+        popupOverlay.classList.remove('hide');
+    })
+
+});
+popupFeedbackWindowClose.addEventListener('click', ()=>{
+    closeAll();
+});
+
