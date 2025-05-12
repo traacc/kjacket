@@ -409,6 +409,8 @@ h1,h2,h3,h4,h5 {
 .clientsLine .clientsLine__desc {
   font-style: italic;
   font-weight: 200;
+
+  font-size: 1.2rem;
 }
 .clientsLine__item {
   flex-shrink: 0;
@@ -802,7 +804,7 @@ textarea.quiz__customAnswer  {
 }
 .manager__content {
   background-color: #fff;
-  padding: 30px 30px;
+  padding: 62px 30px 30px 16px;
   border-radius: 10px;
 
   
@@ -839,7 +841,7 @@ textarea.quiz__customAnswer  {
   padding-top: .5em;
   padding-left: .5em;
   position: relative;
-  margin-top: 1em;
+  margin-top: 2.1em;
   margin-left: 1em;
 }
 .manager__title::before {
@@ -1758,7 +1760,9 @@ textarea.quiz__customAnswer  {
   .clientsLine {
     padding-top: 3.25em;
   }
-    
+  .clientsLine .clientsLine__desc {
+    font-size: 1rem;
+  }
   .clientsLine .clientsLine__row {
     column-gap: 2em;
   }
