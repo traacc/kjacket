@@ -1670,7 +1670,7 @@ textarea.quiz__customAnswer  {
     background-size: 30%;
   }
   .sectionTitle {
-  font-size: 1.116rem;
+  font-size: 1.15rem;
   }
   .header__menu {
     display: none;
@@ -1771,6 +1771,9 @@ textarea.quiz__customAnswer  {
 
   .opportunities__buttons {
     display: none;
+  }
+  .opportunities .sectionTitle {
+    font-weight: 600;
   }
   .advs {
     padding-top: 3.3em;
