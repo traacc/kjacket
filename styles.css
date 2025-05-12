@@ -262,6 +262,13 @@ h1,h2,h3,h4,h5 {
 }
 .hero {
   padding-top: 8.5em;
+
+  background-image: url(./images/hero_bg.svg);
+  background-position: 86% center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  padding-bottom: 7.25em;
 }
 .hero .inner {
   display: flex;
@@ -312,13 +319,10 @@ h1,h2,h3,h4,h5 {
   right: 0;
 }
 .hero .inner .hero__image {
-  background-image: url(./images/hero_bg.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+
 }
 .clientsLine {
-  padding-top: 7.25em;
+  
 }
 .clientsLine .clientsLine__row {
   display: flex;
@@ -888,6 +892,15 @@ textarea.quiz__customAnswer  {
 }
 .materials__item--btn button {
   width: 100%;
+}
+.supply {
+  position: relative;
+}
+.supply .mid_bg {
+  position: absolute;
+  top: -44%;
+  right: -30%;
+  z-index: -1;
 }
 .supply__list {
   margin-bottom: 4.3em;
