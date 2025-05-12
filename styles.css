@@ -692,7 +692,7 @@ h1,h2,h3,h4,h5 {
   align-items: center;
 }
 .offer .offer__content .offer__quiz .quiz__answers .quiz__answer label{
-  font-weight: 500;
+  font-weight: 400;
   background-color: transparent;
   color: #3F3F3F;
   padding: 18px 70px;
@@ -704,6 +704,7 @@ h1,h2,h3,h4,h5 {
 }
 .offer .offer__content .offer__quiz .quiz__buttons .btn{
   padding: 18px 100px;
+  font-weight: 400;
 }
 .offer .offer__content .offer__quiz .quiz__answers .quiz__answer input:checked + label {
   border: 1px solid var(--accent-color);
@@ -754,7 +755,7 @@ h1,h2,h3,h4,h5 {
 }
 .quiz__title {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 0.8em;
 }
 .quiz__customAnswer {
@@ -1066,6 +1067,8 @@ textarea.quiz__customAnswer  {
   transform: rotate(180deg);
 
   transition: transform 0.3s ease;
+
+  flex-shrink: 0;
 }
 .faq .faq__item.active .toggle {
    transform: rotate(0deg);
@@ -1120,6 +1123,10 @@ textarea.quiz__customAnswer  {
   resize: none;
   width: 100%;
   font-size: 0.7rem;
+}
+.feedback__form .btn{
+  font-weight: 400;
+  padding: 16px 100px;
 }
 .faq .faq__feedback .feedback__form textarea {
   margin-bottom: 12px;
@@ -1767,10 +1774,19 @@ textarea.quiz__customAnswer  {
   .advs .inner {
     flex-direction: column;
   }
+  .advs .inner .advs__pic .advs__order .orderExample__title {
+    font-size: 1.85rem;
+  }
   .advs .inner .advs__pic .advs__order {
     position: static;
-    width: 100%;
+    width: 90%;
+
+    margin: 0 auto;
     margin-bottom: 1.5em;
+
+  }
+  .advs__list {
+    width: 90%;
   }
   .opportunities__list {
     column-gap: 1em;
@@ -1784,7 +1800,7 @@ textarea.quiz__customAnswer  {
   .order__img--mobile {
     display: block;
     
-    width: 85%;
+
     text-align: center;
     margin: 0 auto;
 
@@ -1948,7 +1964,7 @@ textarea.quiz__customAnswer  {
   }
   .manager__feedback {
     width: 100%;
-    padding: 19px 40px;
+    padding: 11px 41px;
   }
   .manager__wrapper {
     width: 100%;
@@ -1971,6 +1987,13 @@ textarea.quiz__customAnswer  {
   }
   .faq .faq__feedback .feedback__form input, .faq .faq__feedback .feedback__form textarea {
     font-size: 0.9rem;
+  }
+  .faq .faq__item .toggle {
+
+    width: 26px;
+    height: 26px;
+
+    background-size: 33%;
   }
   .supply .sectionTitle {
     margin-bottom: 2em;
