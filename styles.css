@@ -225,12 +225,12 @@ h1,h2,h3,h4,h5 {
   left: 0;
   top: 0;
 }
-.linkAccess {
+.linkAccess, .openLightbox {
   position: relative;
 
   cursor: pointer;
 }
-.linkAccess::after {
+.linkAccess::after, .openLightbox::after {
   content: '';
 
   position: absolute;
@@ -253,7 +253,7 @@ h1,h2,h3,h4,h5 {
   background-position: center;
   background-repeat: no-repeat;
 }
-.linkAccess:hover::after {
+.linkAccess:hover::after, .openLightbox:hover::after  {
   opacity: 1;
 }
 .header {
@@ -1672,7 +1672,7 @@ textarea.quiz__customAnswer  {
     width: 15px;
 
   }
-  .linkAccess::after {
+  .linkAccess::after, .openLightbox::after {
     width: 23px;
     height: 23px;
 
