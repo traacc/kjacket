@@ -791,7 +791,6 @@ textarea.quiz__customAnswer  {
 
   padding-top: 1em;
   padding-bottom: 1em;
-  margin-bottom: 1em;
 }
 .quiz__buttons {
   display: flex;
@@ -1887,7 +1886,9 @@ textarea.quiz__customAnswer  {
     margin-top: 13px;
     margin-bottom: 12px;
   }
-
+  .offer .offer__content .offer__quiz .quiz__answers {
+    height: 270px;
+  }
   .specification__list tr td {
     font-size: 0.8333rem;
     padding: 10px 0;
@@ -2001,6 +2002,7 @@ textarea.quiz__customAnswer  {
     justify-content: center;
 
     padding-top: 14px;
+    column-gap: 2em;
   }
   .certificates .title {
     text-align: left;
