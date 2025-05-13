@@ -1746,7 +1746,7 @@ textarea.quiz__customAnswer  {
   }
   .hero .hero__main .feedbackFormOpen {
     margin-left: 0;
-    padding: 11px 30px;
+    padding: 18px 30px;
     width: 86%;
 
     font-size: 1rem;
@@ -2064,7 +2064,7 @@ textarea.quiz__customAnswer  {
   }
   .manager__feedback {
     width: 100%;
-    padding: 11px 41px;
+    padding: 15px 41px;
 
     font-size: 1.2rem;
 
@@ -2094,10 +2094,13 @@ textarea.quiz__customAnswer  {
   }
   .faq .faq__item .toggle {
 
-    width: 26px;
+    /*width: 26px;
     height: 26px;
 
-    background-size: 33%;
+    background-size: 33%;*/
+  }
+  .faq .faq__question {
+    column-gap: 1em;
   }
   .faq .faq__question .title .num {
     font-size: 1rem;
@@ -2174,7 +2177,7 @@ textarea.quiz__customAnswer  {
   }
   .feedback__form .btn {
     width: 100%;
-    padding: 8px 38px;
+    padding: 15px 38px;
   }
   .map__contacts .contacts__list .contacts__item {
     font-size: 1.115em;
@@ -2251,8 +2254,26 @@ textarea.quiz__customAnswer  {
   .hero .inner .content ul.desc {
     padding-right: 2em;
   }
+  .hero .hero__main .feedbackFormOpen {
+    font-size: 0.833rem;
+    padding: 14px 30px;
+  }
   .specification__list tr td {
     font-size: 0.9rem;
+  }
+  .manager__feedback {
+    padding: 14px 41px;
+  }
+  .faq .faq__item .toggle {
+
+    width: 32px;
+    height: 32px;
+
+    background-size: 36%;
+  }
+  .feedback__form .btn {
+    width: 100%;
+    padding: 14px 38px;
   }
 }
 @media (max-width: 480px) {
@@ -2261,6 +2282,13 @@ textarea.quiz__customAnswer  {
   } 
   .hero .hero__main {
       max-width: 283px;
+  }
+  .faq .faq__item .toggle {
+
+    width: 30px;
+    height: 30px;
+
+    background-size: 35%;
   }
 }
 @media (max-width: 400px) {
@@ -2275,11 +2303,20 @@ textarea.quiz__customAnswer  {
   .hero .inner .content ul.desc {
     padding-right: 3em;
   }
-
+  .hero .hero__main .feedbackFormOpen {
+    font-size: 0.833rem;
+    padding: 12px 30px;
+  }
   .faq .faq__question .title .num {
       font-size: 1.2rem;
   }
+  .faq .faq__item .toggle {
 
+    width: 28px;
+    height: 28px;
+
+    background-size: 34%;
+  }
 }
 @media (max-width: 380px) {
   html {
@@ -2303,12 +2340,16 @@ textarea.quiz__customAnswer  {
   }
   .hero .hero__main .feedbackFormOpen {
     font-size: 0.833rem;
+    padding: 11px 30px;
   }
   .advs .inner .advs__pic .advs__order .orderExample__title {
       font-size: 1.85rem;
   }
   .specification__list tr td {
     font-size: 0.8333rem;
+  }
+  .manager__feedback {
+    padding: 11px 41px;
   }
   .faq .faq__feedback .privacy { 
     font-size: 0.6rem;
@@ -2321,5 +2362,16 @@ textarea.quiz__customAnswer  {
   }
   .faq .faq__feedback .title {
     margin-bottom: 1em;
+  }
+  .faq .faq__item .toggle {
+
+    width: 26px;
+    height: 26px;
+
+    background-size: 33%;
+  }
+  .feedback__form .btn {
+    width: 100%;
+    padding: 8px 38px;
   }
 }
