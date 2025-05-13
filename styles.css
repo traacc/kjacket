@@ -492,6 +492,8 @@ h1,h2,h3,h4,h5 {
 .opportunities__list .opportunities__item {
   flex-shrink: 0;
   transition: filter .2s ease-in;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .opportunities__list .opportunities__item.onBorder {
   filter: opacity(25%);
@@ -553,6 +555,9 @@ h1,h2,h3,h4,h5 {
 
 .order__img--mobile {
   display: none;
+
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .advs .inner .advs__pic .advs__order .orderExample__title {
@@ -1005,6 +1010,8 @@ textarea.quiz__customAnswer  {
 }
 .supply__line .supply__item {
   flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .clients .clients__line {
   display: flex;
@@ -1837,6 +1844,7 @@ textarea.quiz__customAnswer  {
   }
   .opportunities__list .opportunities__item {
     width: 33%;
+    border-radius: 15px;
   }
   .order__img {
     display: none;
@@ -2134,6 +2142,7 @@ textarea.quiz__customAnswer  {
   }
   .supply__line .supply__item {
     width: 30%;
+    border-radius: 15px;
   }
   .clients .clients__line {
     column-gap: 3em;
@@ -2256,6 +2265,9 @@ textarea.quiz__customAnswer  {
     font-size: 0.833rem;
     padding: 14px 30px;
   }
+  .opportunities__list .opportunities__item {
+    border-radius: 10px;
+  }
   .specification__list tr td {
     font-size: 0.9rem;
   }
@@ -2275,6 +2287,10 @@ textarea.quiz__customAnswer  {
   .materials__list .materials__item {
     padding: 32px 20px 115px 20px;
     max-height: 246px;
+  }
+  .supply__line .supply__item {
+    width: 30%;
+    border-radius: 10px;
   }
   .faq .faq__item .toggle {
 
