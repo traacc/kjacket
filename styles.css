@@ -390,7 +390,7 @@ h1,h2,h3,h4,h5 {
 .clientsLine .inner::before {
   content: '';
   width: var(--clientsLineLeftHideBlockWidth);
-  height: 100px;
+  height: 109px;
   background-color: #FAFAFA;
   position: absolute;
   left: 0;
@@ -1727,7 +1727,7 @@ textarea.quiz__customAnswer  {
   .hero {
     padding-top: 4.9em;
 
-    background-position: 118% 61%;
+    background-position: 118% 68%;
     background-size: 45%;
 
     padding-bottom: 1.25em;
@@ -1738,7 +1738,7 @@ textarea.quiz__customAnswer  {
     font-weight: 600;
   }
   .hero .hero__main {
-    max-width: 283px;
+    max-width: 315px;
   }
   .hero .inner .hero__image {
     width: 55%;
@@ -2243,6 +2243,10 @@ textarea.quiz__customAnswer  {
 @media (max-width: 576px) {
   html {
     font-size: 15px;
+    --clientsLineLeftHideBlockWidth: 27%;
+  }
+  .hero .hero__main {
+   max-width: 291px;
   }
   .hero .inner .content ul.desc {
     padding-right: 2em;
@@ -2251,9 +2255,18 @@ textarea.quiz__customAnswer  {
     font-size: 0.9rem;
   }
 }
+@media (max-width: 480px) {
+  html {
+    --clientsLineLeftHideBlockWidth: 29%;
+  } 
+  .hero .hero__main {
+      max-width: 283px;
+  }
+}
 @media (max-width: 400px) {
   html {
     font-size: 14px;
+    --clientsLineLeftHideBlockWidth: 29%;
   }
   .btnRound {
     width: 28px;
@@ -2271,6 +2284,7 @@ textarea.quiz__customAnswer  {
 @media (max-width: 380px) {
   html {
     font-size: 12px;
+    --clientsLineLeftHideBlockWidth: 27%;
   }
   .btnRound {
     width: 24px;
