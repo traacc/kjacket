@@ -334,7 +334,7 @@ h1,h2,h3,h4,h5 {
   display: flex;
 }
 .hero .inner .content .title{
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0.5333em;
 
@@ -355,7 +355,7 @@ h1,h2,h3,h4,h5 {
 .hero .inner .content ul.desc li::marker{
 
   color: var(--accent-color);
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 0;
 }
 .hero .inner .content ul.desc li::before {
@@ -889,8 +889,7 @@ textarea.quiz__customAnswer  {
 .certificates .title {
   text-align: center;
   position: relative;
-  margin-bottom: 1.2em;
-
+  
   font-weight: 500;
 
   display: inline-block;
@@ -904,6 +903,8 @@ textarea.quiz__customAnswer  {
 }
 .certificates .certificates__title{
   text-align: center;
+  align-items: center;
+  margin-bottom: 1.2em;
 }
 .certificates .certificates__list .certificates__item .certificates__pic {
   border-radius: 20px;
@@ -1134,7 +1135,7 @@ textarea.quiz__customAnswer  {
   border-radius: 15px;
 }
 .faq .faq__feedback .privacy {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 
   margin-bottom: 24px;
 }
@@ -1739,7 +1740,7 @@ textarea.quiz__customAnswer  {
     font-weight: 600;
   }
   .hero .hero__main {
-    max-width: 223px;
+    max-width: 283px;
   }
   .hero .inner .hero__image {
     width: 55%;
@@ -1750,7 +1751,7 @@ textarea.quiz__customAnswer  {
     padding: 11px 30px;
     width: 86%;
 
-    font-size: 0.833rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   .hero .inner .content ul.desc {
@@ -1816,7 +1817,7 @@ textarea.quiz__customAnswer  {
     flex-direction: column;
   }
   .advs .inner .advs__pic .advs__order .orderExample__title {
-    font-size: 1.85rem;
+    font-size: 1.65rem;
   }
   .advs .inner .advs__pic .advs__order {
     position: static;
@@ -1999,9 +2000,12 @@ textarea.quiz__customAnswer  {
     display: flex;
     text-align: center;
     justify-content: center;
+
+    padding-top: 14px;
   }
   .certificates .title {
     text-align: left;
+    padding-top: 0;
   }
   .certificates .certificates__list {
     column-gap: 0;
@@ -2230,11 +2234,57 @@ textarea.quiz__customAnswer  {
 }
 @media (max-width: 576px) {
   html {
-    font-size: 12px;
+    font-size: 15px;
+  }
+  .btnRound {
+    width: 32px;
+    height: 32px;
+  }
+  .hero .inner .content ul.desc {
+    padding-right: 2em;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+  .btnRound {
+    width: 28px;
+    height: 28px;
+  }
+  .hero .inner .content ul.desc {
+    padding-right: 3em;
+  }
+}
+@media (max-width: 380px) {
   html {
     font-size: 12px;
+  }
+  .btnRound {
+    width: 24px;
+    height: 24px;
+  }
+  .hero {
+    padding-top: 4.9em;
+
+    background-position: 118% 61%;
+    background-size: 45%;
+
+    padding-bottom: 1.25em;
+  }
+  .hero .hero__main {
+    max-width: 223px;
+  }
+  .hero .hero__main .feedbackFormOpen {
+    font-size: 0.833rem;
+  }
+  .advs .inner .advs__pic .advs__order .orderExample__title {
+      font-size: 1.85rem;
+  }
+  .faq .faq__feedback .privacy { 
+    font-size: 0.6rem;
+  }
+  .hero .inner .content ul.desc {
+    padding-right: unset;
   }
 }
