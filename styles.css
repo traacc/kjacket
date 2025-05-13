@@ -1688,8 +1688,8 @@ textarea.quiz__customAnswer  {
     border-radius: 5px;
   }
   .btnRound {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
 
     background-size: 30%;
   }
@@ -2091,7 +2091,7 @@ textarea.quiz__customAnswer  {
     padding: 16px;
   }
   .faq .faq__feedback .feedback__form input, .faq .faq__feedback .feedback__form textarea {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .faq .faq__item .toggle {
 
@@ -2110,14 +2110,14 @@ textarea.quiz__customAnswer  {
     column-gap: 0;
   }
   .faq .faq__item.active .faq__answer {
-    padding: 14px 8px;
+    padding: 14px 12px;
     
  
   }
   .faq .faq__item .faq__answer {
     padding: 0 8px;
     font-weight: 300;
-    font-size: 0.833rem;
+    font-size: 1rem;
   }
   .supply .sectionTitle {
     margin-bottom: 2em;
@@ -2167,8 +2167,8 @@ textarea.quiz__customAnswer  {
     display: none;
   }
   .faq .faq__feedback .feedback__form input {
-    height: 28px;
-    margin-bottom: 9px;
+    height: 2.5em;
+    margin-bottom: 0.8333em;
   }
   .map {
     padding-bottom: 3em;
@@ -2183,10 +2183,7 @@ textarea.quiz__customAnswer  {
   .map__contacts .contacts__list .contacts__item {
     font-size: 1.115em;
   }
-  .map__contacts .contacts__list .contacts__item img {
-    width: 32px;
-    flex-shrink: 0;
-  }
+
   .map .map__contacts h3 {
     font-size: 1.6rem;
   }
@@ -2325,8 +2322,8 @@ textarea.quiz__customAnswer  {
     --clientsLineLeftHideBlockWidth: 29%;
   }
   .btnRound {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
   .hero .inner .content ul.desc {
     padding-right: 3em;
@@ -2359,6 +2356,13 @@ textarea.quiz__customAnswer  {
 
     background-size: 34%;
   }
+  .faq .faq__item .faq__answer {
+    font-size: 0.9rem;
+  }
+  .faq .faq__feedback .feedback__form input, .faq .faq__feedback .feedback__form textarea {
+    font-size: 0.9rem;
+  }
+
 }
 @media (max-width: 380px) {
   html {
@@ -2415,6 +2419,13 @@ textarea.quiz__customAnswer  {
     height: 26px;
 
     background-size: 33%;
+  }
+  .faq .faq__item .faq__answer {
+    font-size: 0.833rem;
+  }
+  .map__contacts .contacts__list .contacts__item img {
+    width: 32px;
+    flex-shrink: 0;
   }
   .feedback__form .btn {
     width: 100%;
