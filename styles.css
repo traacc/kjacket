@@ -2135,14 +2135,16 @@ textarea.quiz__customAnswer  {
   }
   .supply__line {
     column-gap: 0.7em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.9em;
 
     align-items: center;
     
   }
   .supply__line .supply__item {
-    width: 30%;
+    width: 35%;
     border-radius: 15px;
+
+    aspect-ratio: 1.44;
   }
   .clients .clients__line {
     column-gap: 3em;
@@ -2291,6 +2293,8 @@ textarea.quiz__customAnswer  {
   .supply__line .supply__item {
     width: 30%;
     border-radius: 10px;
+
+
   }
   .faq .faq__item .toggle {
 
@@ -2361,6 +2365,10 @@ textarea.quiz__customAnswer  {
   .materials__list .materials__item {
     padding: 32px 20px 115px 20px;
     max-height: 192px;
+  }
+
+  .supply__line .supply__item{
+      width: 34%;
   }
   .faq .faq__question .title .num {
     font-size: 1rem;
@@ -2438,6 +2446,13 @@ textarea.quiz__customAnswer  {
   }
   .faq .faq__item .faq__answer {
     font-size: 0.833rem;
+  }
+  .supply__line {
+    column-gap: 0.7em;
+    margin-bottom: 0.9em;
+  }
+  .supply__line .supply__item{
+    width: 31%;
   }
   .map__contacts .contacts__list .contacts__item img {
     width: 32px;
