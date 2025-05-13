@@ -892,14 +892,14 @@ textarea.quiz__customAnswer  {
 
   display: inline-block;
 
-    padding-top: 14px;
-    padding-left: 25px;
+  padding-top: 14px;
+  padding-left: 25px;
 }
 .certificates .certificates__list {
   display: flex;
   column-gap: 35px;
 }
-.certificates .certificates__title{
+.certificates .certificates__header{
   text-align: center;
   align-items: center;
   margin-bottom: 1.2em;
@@ -1688,8 +1688,8 @@ textarea.quiz__customAnswer  {
     border-radius: 5px;
   }
   .btnRound {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 
     background-size: 30%;
   }
@@ -1883,16 +1883,16 @@ textarea.quiz__customAnswer  {
     display: block;
     width: 90%;
     margin: 0 auto;
-    margin-top: 13px;
-    margin-bottom: 12px;
+    margin-bottom: 1em;
   }
   .offer .offer__content .offer__quiz .quiz__answers {
     height: 270px;
   }
   .specification__list tr td {
-    font-size: 0.8333rem;
+    font-size: 1rem;
     padding: 10px 0;
   }
+  
   .specification__list tr td.value {
     text-align: right;
   }
@@ -1906,13 +1906,18 @@ textarea.quiz__customAnswer  {
     margin-top: 3em;
   }
   .spheres .sectionTitle {
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
   .spheres--mobile {
     display: block;
   }
   .spheres--mobile .spheres__title {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2em;
+
+    margin-bottom: 25px;
   }
   .spheres--mobile .spheres__title .spheres__buttons {
     display: flex;
@@ -1996,17 +2001,17 @@ textarea.quiz__customAnswer  {
     column-gap: 0.3em;
   }
   
-  .certificates .certificates__title {
+  .certificates .certificates__header {
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    padding-top: 14px;
+    
     column-gap: 2em;
   }
   .certificates .title {
     text-align: left;
-    padding-top: 0;
+    padding-top: 14px;
   }
   .certificates .certificates__list {
     column-gap: 0;
@@ -2017,6 +2022,7 @@ textarea.quiz__customAnswer  {
   }
   .certificates .certificates__list .certificates__item .certificates__title { 
     margin-left: 0;
+    text-align: center;
   }
   .materials {
     display: none;
@@ -2151,6 +2157,7 @@ textarea.quiz__customAnswer  {
   .faq .faq__feedback .title {
     font-size: 1.166em;
     text-align: center;
+    margin-bottom: 1em;
   }
   .faq .faq__feedback .feedback__title .subtitle {
     display: none;
@@ -2237,12 +2244,11 @@ textarea.quiz__customAnswer  {
   html {
     font-size: 15px;
   }
-  .btnRound {
-    width: 32px;
-    height: 32px;
-  }
   .hero .inner .content ul.desc {
     padding-right: 2em;
+  }
+  .specification__list tr td {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 400px) {
@@ -2256,6 +2262,11 @@ textarea.quiz__customAnswer  {
   .hero .inner .content ul.desc {
     padding-right: 3em;
   }
+
+  .faq .faq__question .title .num {
+      font-size: 1.2rem;
+  }
+
 }
 @media (max-width: 380px) {
   html {
@@ -2282,10 +2293,19 @@ textarea.quiz__customAnswer  {
   .advs .inner .advs__pic .advs__order .orderExample__title {
       font-size: 1.85rem;
   }
+  .specification__list tr td {
+    font-size: 0.8333rem;
+  }
   .faq .faq__feedback .privacy { 
     font-size: 0.6rem;
   }
   .hero .inner .content ul.desc {
     padding-right: unset;
+  }
+  .faq .faq__question .title .num {
+      font-size: 1rem;
+  }
+  .faq .faq__feedback .title {
+    margin-bottom: 1em;
   }
 }
