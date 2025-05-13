@@ -1928,7 +1928,7 @@ textarea.quiz__customAnswer  {
     gap: unset;
   }
   .spheres .spheres__list .spheres__item {
-    height: 146px;
+    height: 276px;
 
     padding: 14px;
   }
@@ -2040,8 +2040,8 @@ textarea.quiz__customAnswer  {
     margin-bottom: 1em;
   }
   .materials__list .materials__item {
-    padding: 32px 20px 115px 20px;
-    max-height: 192px;
+    padding: 32px 20px 150px 20px;
+    max-height: 270px;
   }
   .materials__list .materials__item .materials__title {
     font-size: 1.25rem;
@@ -2078,10 +2078,11 @@ textarea.quiz__customAnswer  {
     margin-bottom: 1em;
   }
   .manager__content .manager__data {
-    align-items: start;
+    align-items: center;
+    
   }
   .manager__pic {
-    max-width: 74px;
+    max-width: 250px;
   }
   .faq .inner .faq__wrapper {
     flex-direction: column;
@@ -2103,7 +2104,7 @@ textarea.quiz__customAnswer  {
     column-gap: 1em;
   }
   .faq .faq__question .title .num {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .faq .faq__question .title {
     column-gap: 0;
@@ -2261,8 +2262,22 @@ textarea.quiz__customAnswer  {
   .specification__list tr td {
     font-size: 0.9rem;
   }
+  .spheres .spheres__list .spheres__item {
+    height: 182px;
+  }
+  .manager__content .manager__data {
+    justify-content: space-between;
+  }
+  .manager__pic {
+    max-width: 180px;
+    width: 55%;
+  }
   .manager__feedback {
     padding: 14px 41px;
+  }
+  .materials__list .materials__item {
+    padding: 32px 20px 115px 20px;
+    max-height: 246px;
   }
   .faq .faq__item .toggle {
 
@@ -2283,12 +2298,25 @@ textarea.quiz__customAnswer  {
   .hero .hero__main {
       max-width: 283px;
   }
+  .sectionTitle {
+    font-size: 1rem;
+  }
+  .manager__content .manager__data {
+    align-items: start;
+  }
+  .manager__pic {
+    max-width: 110px;
+    width: 55%;
+  }
   .faq .faq__item .toggle {
 
     width: 30px;
     height: 30px;
 
     background-size: 35%;
+  }
+  .faq .faq__question .title .num {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 400px) {
@@ -2307,8 +2335,22 @@ textarea.quiz__customAnswer  {
     font-size: 0.833rem;
     padding: 12px 30px;
   }
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+  .manager__pic {
+    max-width: 95px;
+    width: 50%;
+  }
+  .spheres .spheres__list .spheres__item {
+    height: 146px;
+  }
+  .materials__list .materials__item {
+    padding: 32px 20px 115px 20px;
+    max-height: 192px;
+  }
   .faq .faq__question .title .num {
-      font-size: 1.2rem;
+    font-size: 1rem;
   }
   .faq .faq__item .toggle {
 
@@ -2347,6 +2389,10 @@ textarea.quiz__customAnswer  {
   }
   .specification__list tr td {
     font-size: 0.8333rem;
+  }
+  .manager__pic {
+    max-width: 74px;
+    width: 40%;
   }
   .manager__feedback {
     padding: 11px 41px;
