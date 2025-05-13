@@ -781,11 +781,6 @@ h1,h2,h3,h4,h5 {
   font-weight: 500;
   margin-bottom: 0.8em;
 }
-.quiz__customAnswer {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-}
 textarea.quiz__customAnswer  {
   resize: none;
   width: 100%;
@@ -793,6 +788,10 @@ textarea.quiz__customAnswer  {
   border: 1px solid #E0E0E0;
   border-radius: 10px;
   padding: 20px;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 .quiz__buttons {
   display: flex;
